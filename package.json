@@ -1,0 +1,12 @@
+{
+  "name": "age-calculator",
+  "version": "1.0.0",
+  "description": "Kullanıcının girmiş olduğu bilgilere göre yaş hesaplaması yapan web uygulaması.",
+  "main": "index.js",
+  "scripts": {
+    "scss": "sass --no-source-map --watch assets/scss/style.scss assets/css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
