@@ -3,34 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Age calculator app</title>
+  <title>Age Calculator App</title>
 
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
+  <div class="container">
+    <div class="input-group-wrapper">
+      <div class="input-group">
+        <label for="day">Day</label>
+        <input id="day" type="number" placeholder="DD" min="1" max="31">
+      </div>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <h4 style="display: inline;">Umut Akıncı</h4>.
+      <div class="input-group">
+        <label for="month">Month</label>
+        <input id="month" type="number" placeholder="MM" min="1" max="12">
+      </div>
+  
+      <div class="input-group">
+        <label for="year">Year</label>
+        <!-- max şu anki tarih olcak -->
+        <input id="year" type="number" placeholder="YYYY" min="1900" max="">
+      </div>
+    </div>
+    <div class="seperator-wrapper">
+      <hr class="seperator">
+      <div class="circle-image">
+        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
+      </div>
+    </div>
+    <div class="result-wrapper">
+      <div class="result-group">
+        <h2 id="resultYear" class="output">- -</h2>
+        <h3 class="info">years</h3>
+      </div>
+
+      <div class="result-group">
+        <h2 id="resultMonths" class="output">- -</h2>
+        <h3 class="info">months</h3>
+      </div>
+
+      <div class="result-group">
+        <h2 id="resultDays" class="output">- -</h2>
+        <h3 class="info">days</h3>
+      </div>
+    </div>
   </div>
 </body>
 </html>
