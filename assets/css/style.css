@@ -42,4 +42,121 @@
 }
 body {
   font-family: "Poppins";
+  background-color: hsl(0, 0%, 86%);
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(0, 0%, 100%);
+  padding: 2rem;
+  width: 75%;
+  border: 1px solid transparent;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 10rem;
+}
+
+.input-group-wrapper {
+  display: flex;
+  gap: 1.5rem;
+}
+.input-group-wrapper .input-group {
+  color: hsl(0, 1%, 44%);
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 2rem;
+}
+.input-group-wrapper .input-group label {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.7rem;
+}
+.input-group-wrapper .input-group input {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  width: 18vw;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  outline: none;
+}
+@media screen and (max-width: 998px) {
+  .input-group-wrapper .input-group input {
+    width: 10vw;
+    font-size: 0.75rem;
+  }
+}
+.input-group-wrapper .input-group input:focus {
+  border-color: hsl(259, 100%, 65%);
+}
+
+.seperator-wrapper {
+  position: relative;
+}
+.seperator-wrapper .seperator {
+  display: inline-block;
+  height: 1px;
+  width: 100%;
+  background-color: hsl(0, 0%, 86%);
+}
+.seperator-wrapper .circle-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: hsl(259, 100%, 65%);
+  cursor: pointer;
+  transition: 0.25s background-color;
+  position: absolute;
+  right: 0;
+  bottom: -2rem;
+}
+@media screen and (max-width: 998px) {
+  .seperator-wrapper .circle-image {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.seperator-wrapper .circle-image:hover {
+  background-color: hsl(0, 0%, 8%);
+}
+
+.result-wrapper {
+  margin: 4rem 0;
+}
+.result-wrapper .result-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 4rem;
+  margin: -2rem 0;
+}
+@media screen and (max-width: 998px) {
+  .result-wrapper .result-group {
+    font-size: 2rem;
+  }
+}
+.result-wrapper .result-group * {
+  margin: 0;
+}
+.result-wrapper .result-group .output {
+  color: hsl(259, 100%, 65%);
+}
+.result-wrapper .result-group .info {
+  color: hsl(0, 0%, 8%);
 }

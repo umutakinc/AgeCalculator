@@ -14,25 +14,24 @@
     <div class="input-group-wrapper">
       <div class="input-group">
         <label for="day">Day</label>
-        <input id="day" type="number" placeholder="DD" min="1" max="31">
+        <input id="day" type="text" placeholder="DD">
       </div>
   
       <div class="input-group">
         <label for="month">Month</label>
-        <input id="month" type="number" placeholder="MM" min="1" max="12">
+        <input id="month" type="text" placeholder="MM">
       </div>
   
       <div class="input-group">
         <label for="year">Year</label>
-        <!-- max şu anki tarih olcak -->
-        <input id="year" type="number" placeholder="YYYY" min="1900" max="">
+        <input id="year" type="text" placeholder="YYYY">
       </div>
     </div>
     <div class="seperator-wrapper">
-      <hr class="seperator">
-      <div class="circle-image">
+      <span class="seperator">
+      <a id="showResultButton" class="circle-image">
         <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
-      </div>
+      </a>
     </div>
     <div class="result-wrapper">
       <div class="result-group">
