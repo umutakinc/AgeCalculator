@@ -6,6 +6,14 @@ body {
     padding: 0 1rem;
     position: relative;
 }
+
+input {
+    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
 .container {
     position: absolute;
     top: 50%;
@@ -37,6 +45,10 @@ body {
             text-transform: uppercase;
             letter-spacing: 3px;
             font-size: .7rem;
+
+            &.fail {
+                color: red;
+            }
         }
 
         input {
@@ -56,6 +68,10 @@ body {
 
             &:focus {
                 border-color: $purple;
+            }
+
+            &.fail {
+                border-color: red;
             }
         }
     }

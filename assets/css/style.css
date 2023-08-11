@@ -49,6 +49,11 @@ body {
   position: relative;
 }
 
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .container {
   position: absolute;
   top: 50%;
@@ -81,6 +86,9 @@ body {
   letter-spacing: 3px;
   font-size: 0.7rem;
 }
+.input-group-wrapper .input-group label.fail {
+  color: red;
+}
 .input-group-wrapper .input-group input {
   font-size: 1rem;
   font-weight: 700;
@@ -99,6 +107,9 @@ body {
 }
 .input-group-wrapper .input-group input:focus {
   border-color: hsl(259, 100%, 65%);
+}
+.input-group-wrapper .input-group input.fail {
+  border-color: red;
 }
 
 .seperator-wrapper {
