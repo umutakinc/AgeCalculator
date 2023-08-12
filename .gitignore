@@ -3,3 +3,4 @@ design
 style-guide.md
 .DS_Store
 node_modules/
+.vscode/
