@@ -1,18 +1,12 @@
-const DATE = new Date();
-const NOW_DAY = DATE.getDate();
-const NOW_MONTH = DATE.getMonth() + 1;
-const NOW_YEAR = DATE.getFullYear();
+const MOMENT = moment(); // Moment.js kütüphanesi tanımlandı
 
-let inputs = document.querySelectorAll('input');
-
-
+let inputs = document.querySelectorAll('input'); //İnputlar seçildi
 let calculateButton = document.querySelector('#calculateButton');
+let yearInput = document.getElementById('year');
 
 // Yıl inputunun max değerini şu anki yıl olarak ayarlayan fonksiyon
 function changeYearNow() {
-    let yearInput = document.getElementById('year');
-    
-    yearInput.max = NOW_YEAR;
+    yearInput.max = MOMENT.year();
 }
 
 // Kullanıcı tarafından girilen değerlerin validasyon işlemini sağlayan fonksiyon
@@ -42,14 +36,20 @@ calculateButton.addEventListener("click", function() {
     let monthInputValue = document.querySelector('#month').value;
     let yearInputValue = document.querySelector('#year').value;
 
+    let date = moment(`${dayInputValue}/${monthInputValue}/${yearInputValue}`, 'DD/MM/YYYY');
+    let duration = moment.duration(MOMENT.diff(date));
+    let years = duration.years();
+    let months = duration.months();
+    let days = duration.days();
+
     if (dayInputValue && monthInputValue && yearInputValue) {
-        let resultDay = NOW_DAY - dayInputValue;
-        let resultMonth = NOW_MONTH - monthInputValue;
-        let resultYear = NOW_YEAR - yearInputValue;
+        let resultDay = days;
+        let resultMonth = months;
+        let resultYear = years;
         
-        document.getElementById('resultYear').innerText = resultYear;
-        document.getElementById('resultMonths').innerText = resultMonth;
-        document.getElementById('resultDays').innerText = resultDay;
+        document.querySelector('#resultYear').innerText = resultYear;
+        document.querySelector('#resultMonths').innerText = resultMonth;
+        document.querySelector('#resultDays').innerText = resultDay;
     }
 });
 
